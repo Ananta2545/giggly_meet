@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { useEffect } from 'react'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { Github } from 'lucide-react'
@@ -12,6 +12,10 @@ const page = () => {
 
     const [isLoading, setIsLoading] = useState(false);
     const url = process.env.NEXTAUTH_URL;
+
+    useEffect(()=>{
+        localStorage.removeItem('hasShownWelcome');
+    }, [])
 
     const handleLogin = async({provider}) => {
         console.log("Provider : ", provider);

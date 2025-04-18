@@ -77,7 +77,7 @@ const page = () => {
     const endMeeting = () => {
         try {
             console.log("Navigating to home without destroying Zego instance.");
-            router.push('/')
+            // router.push('/')
         } catch (err) {
             console.warn("Error during meeting end:", err);
         } finally {

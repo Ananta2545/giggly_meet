@@ -8,6 +8,7 @@ import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
 import { toast } from 'react-toastify';
 import {v4 as uuidv4} from 'uuid';
+import Loader from './Loader';
 
 const MeetingActions = () => {
   const {data:session} = useSession();
@@ -58,6 +59,7 @@ const MeetingActions = () => {
 
   return (
     <>
+    {isLoading && <Loader/>}
     <div className='flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4'>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
