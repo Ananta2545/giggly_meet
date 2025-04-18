@@ -19,10 +19,10 @@ export const authOptions = {
 
   callbacks: {
     async jwt({ token, user, account }) {
-      console.log("🔑 JWT Callback");
-      console.log("Token:", token);
-      console.log("User:", user);
-      console.log("Account:", account);
+      // console.log("🔑 JWT Callback");
+      // console.log("Token:", token);
+      // console.log("User:", user);
+      // console.log("Account:", account);
 
       if (user) {
         token.id = user.id;
@@ -34,15 +34,15 @@ export const authOptions = {
     },
 
     async session({ session, token }) {
-      console.log("📦 Session Callback");
+      console.log("Session : ", session);
       session.user.id = token.id;
       return session;
     },
 
     async signIn({ user, profile }) {
-      console.log("🚀 signIn Callback Triggered");
-      console.log("User:", user);
-      console.log("Profile:", profile);
+      // console.log("🚀 signIn Callback Triggered");
+      // console.log("User:", user);
+      // console.log("Profile:", profile);
 
       await dbConnect();
 

@@ -13,18 +13,24 @@ const page = () => {
     const [isLoading, setIsLoading] = useState(false);
     const url = process.env.NEXTAUTH_URL;
 
-    const handleLogin = async({provider})=>{
+    const handleLogin = async({provider}) => {
         console.log("Provider : ", provider);
         setIsLoading(true);
-        try{
-            await signIn(provider, {callbackUrl:url, redirect:false});
-            toast.info(`Logging with ${provider}`)
-        }catch(err){
-            toast.error(`Failed to login with ${provider}, please try again`)
-        }finally{
+        try {
+            const result = await signIn(provider, { callbackUrl: url, redirect: false });
+            if (result?.error) {
+                toast.error(`Failed to login with ${provider}, please try again`);
+            } else {
+                toast.info(`Logging in with ${provider}`);
+            }
+        } catch (err) {
+            console.log("Login error:", err);
+            toast.error(`Failed to login with ${provider}, please try again`);
+        } finally {
             setIsLoading(false);
         }
-    }
+    };
+    
 
     return (
         <div className='flex min-h-screen bg-gradient-to-r from-blue-100 to-purple-200 dark:from-gray-900 dark:to-gray-800'>
