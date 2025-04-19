@@ -124,7 +124,7 @@ npm run dev
 ## 💬 Let’s Connect
 
 Made with ❤️ and a bit of caffeine.  
-Feel free to drop a **star ⭐** or connect with me on [LinkedIn](https://www.linkedin.com/in/your-profile) if you vibed with this project!
+Feel free to drop a **star ⭐** or connect with me on [LinkedIn](https://www.linkedin.com/in/ananta-chatterjee-896219245/) if you vibed with this project!
 
 Stay quirky, stay giggly 😄  
 **~ The Giggly Dev**
