@@ -7,18 +7,18 @@ import React, { useState } from 'react'
 const slides = [
   {
     image: "https://www.gstatic.com/meet/user_edu_get_a_link_light_90698cd7b4ca04d3005c962a3756c42d.svg",
-    title: "Get a link you can share",
-    description: "Click New meeting to get a link you can send to people you want to meet with",
+    title: "Summon Your Minions with a Link",
+    description: "Click 'New meeting' to spawn a magical link and send it to your fellow keyboard warriors.",
   },
   {
     image: "https://www.gstatic.com/meet/user_edu_scheduling_light_b352efa017e4f8f1ffda43e847820322.svg",
-    title: "Plan ahead",
-    description: "Click New meeting to schedule meetings in Google Calendar and send invites to participants",
+    title: "Become the Time Wizard",
+    description: "Click 'New meeting' to schedule your grand council on Google Calendar. Invite your noble knights.",
   },
   {
     image: "https://www.gstatic.com/meet/user_edu_safety_light_e04a2bbb449524ef7e49ea36d5f25b65.svg",
-    title: "Your meeting is safe",
-    description: "No one can join a meeting unless invited or admitted by the host",
+    title: "Keep the Trolls Out",
+    description: "Only the chosen ones may enter. No uninvited party crashers allowed—guarded by digital dragons.",
   },
 ]
 const MeetingFeature = () => {
@@ -60,7 +60,7 @@ const MeetingFeature = () => {
       </p>
       <div className='flex justify-center space-x-2 mt-4'>
         {slides.map((_, index)=>(
-          <div key={index} className={`inline-block w-3 h-3 rounded-full ${index === currentSlide ? "bg-blue-600" : "bg-gray-300"}`}>
+          <div key={index} className={`inline-block w-3 h-3 rounded-full ${index === currentSlide ? "bg-violet-500" : "bg-gray-300"}`}>
 
           </div>
         ))}

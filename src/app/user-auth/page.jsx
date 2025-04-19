@@ -22,6 +22,7 @@ const page = () => {
         setIsLoading(true);
         try {
             const result = await signIn(provider, { callbackUrl: url, redirect: false });
+            console.log("Result : ", result);
             if (result?.error) {
                 toast.error(`Failed to login with ${provider}, please try again`);
             } else {
